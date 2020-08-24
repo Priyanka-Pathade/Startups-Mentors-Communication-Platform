@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup-login.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <% if(msg=="success"){ %> 
+        <div class="alert alert-success" role="alert" style="text-align: center;">
+            Account created successfully
+        </div>
+      <% } %> 
+      <% if(msg=="invalid"){ %> 
+        <div class="alert alert-danger" role="alert" style="text-align: center;">
+            Invalid email-id
+        </div>
+      <% } %>  
+      <% if(msg=="invalid1"){ %> 
+        <div class="alert alert-danger" role="alert" style="text-align: center;">
+            Invalid Password
+        </div>
+      <% } %>   
+      <div class="jumbotron" style=" margin-left:20%; width: 50%;">
+        <form method="post" action="">
+          <h3 style="text-align:center;">USER LOGIN</h3>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Login As:</label>
+              <select class="form-control" id="exampleFormControlSelect1" name="category" required >
+                <option disabled selected value> -- select an option -- </option>
+                <option>Startup</option>
+                <option>Mentor</option>
+                <option>Student</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+          </div>
+          <div style="text-align:center;">
+          <button type="submit" name="submit" class="btn btn-primary">Log In</button><br><br>
+          </div>
+          <div style="float: left;" >
+            <a href="">Forget Password?</a>
+          </div>
+          <a href="/sign" style="float: right;">Dont have account?</a>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

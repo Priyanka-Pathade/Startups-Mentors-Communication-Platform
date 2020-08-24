@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Startup_private</title>
+
+	  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+.checked {
+  color: orange;
+}
+</style>
+</head>
+<body>
+
+<!-- Code For Navigation Bar -->
+<div class="container-fluid">
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+  <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>
+  <!-- <a class="navbar-brand" href="#"></a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#">Advertised</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+   	</li>
+       <li class="nav-item">
+        <a class="nav-link" href="#" style="color: white;"><%= user %></a>
+   	</li>
+    </ul>
+   
+  </div>
+</nav>
+</header>
+</div>
+<!-- <%  var flag=0;   %>
+<%  if(flag==1){  %>
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<%   }   %> -->
+<section>
+  <div class="container-fluid"style="background-image: url(./images/private.png);margin-top:2%;">
+   <div class="row">
+
+    <div class="col-lg-2"></div>
+<div class="col-lg-8">
+	<h1 class="display-4"><b>Get your work done quicker!</b></h1>
+	<h2>Keep all your team’s information in a private, up-to-date knowledge base. So you can find answers faster than ever.</h2><br><br>
+<p class="lead"><h3><b>Stay productive</b></h3>
+<h4>Focus on building products, not
+answering questions.</h4></p><br><br>
+
+<p class="lead"><h3><b>Unlock information</b></h3>
+<h4>Stop digging through chat threads, emails, and old wikis.</h2></p>
+
+</div>
+<div class="col-lg-2" >
+
+</div>
+
+</div>
+</div>
+</section>
+
+<br>
+<section>
+  <div class="container " >
+   	<!-- Jumbotron for Header  -->
+		<div class="jumbotron ">
+        <div class='row'>
+          <form method="Post" action="">
+        <div class="col-lg-8">
+	<h3 style="margin-left: 2%;">Filter Mentor according to your need</h3><br>
+	 <div class="form-group">
+
+        <label for="sel1">Domain:</label>
+        <select class="form-control" id="sel1" style="width:100%;" name="domain" required>
+            <option disabled>Select</option>
+            <option disabled>Select</option>
+		<option>Accounting</option>
+		<option>AdTech</option>
+		<option>Agri-Tech</option>
+		<option>Apparel & Accessories</option>
+		<option>Auto, Truck & Motorcycle Parts</option>
+		<option>Biotechnology</option>
+		<option>Business Finance</option>
+		<option>Business Support Services</option>
+		<option>Coaching</option>
+		<option>Construction & Engineering</option>
+		<option>Data Science</option>
+		<option>Education Technology</option>
+		<option>Electronics</option>
+		<option>Event Management</option>
+		<option>Food Processing</option>
+		<option>Health & Wellness</option>
+		<option>Healthcare Technology</option>
+		 <option>Home Security Solutions</option>
+		 <option>Industrial Design</option>
+		 <option>IT Consulting</option>
+		 <option>Machine Learning</option>
+		 <option>Network Technology Solutions</option>
+		 <option>NGO</option>
+		 <option>Organic Agriculture</option>
+    </select><br>
+    <label for="sel2">Perfection:</label>
+    <select class="form-control" id="sel2" style="width:100%;" name="level">
+    <option disabled>Select</option>
+		<option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Expert</option>
+        </select><br>
+        <button type="submit" name="submit" class="btn btn-primary" >See List</button>
+    </div>
+</div>
+</form>
+<div class="col-lg-1"></div>
+
+<div class="col-lg-3" style="height:70%;">
+<img src="./images/contact.png " alt="">
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>

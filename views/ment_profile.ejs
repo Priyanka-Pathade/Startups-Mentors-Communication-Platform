@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style media="screen">
+      .avatar-pic {
+width: 150px;
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="container" style="margin-left: 20%;">
+<div class="jumbotron">
+
+    <div class="progress">
+  <div class="progress-bar progress-bar-info" gressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%;">
+    70% Complete (info)"
+  </div>
+</div>
+
+<form action="" method="Post">
+<input type="file" name="img" >
+
+  <div class="form-group">
+    <label for="email">Full Name:</label>
+    <input type="text" class="form-control" style="width:70%;"  value="<%= data.name; %>" id="fname" disabled>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Register As:</label>
+    <input type="text" class="form-control" id="name" name="cat"  value="<%= data.Register_as;  %> " disabled>
+  </div>
+  <label for="gender">Gender:</label>
+  <label class="radio-inline"><input type="radio" name="gender" >Male</label>
+  <label class="radio-inline"><input type="radio" name="gender">Female</label>
+
+  <div class="form-group">
+  <label for="exampleFormControlTextarea1">Success Stories:</label>
+  <textarea class="form-control rounded-0" name="stories" id="Textarea1" rows="3" style="width:70%;" maxlength="500" placeholder="Describe in 500 characters only!!!" required>
+  </textarea>
+</div>
+<div class="form-group">
+  <label for="email">Email address:</label>
+  <input type="email" class="form-control"  style="width:70%;"  value="<%= data.email; %>" name="email" id="email" disabled>
+</div>
+<div class="form-group">
+  <label for="pwd">Contact Number:</label>
+  <input type="tel" class="form-control"style="width:70%;" name="mobile" required>
+</div>
+  <div class="form-group">
+    <label for="sel1">Focus Sectors:</label>
+ <select class="form-control" id="sel1" style="width:70%;" name="sector1" required>
+     <option>None</option>
+     <option>Machine Learning</option>
+    <option>Network Technology Solutions</option>
+    <option>NGO</option>
+    <option>Organic Agriculture</option>
+ </select>
+
+ <select class="form-control" id="sel1" style="width:70%;" name="sector2">
+     <option>None</option>
+   <option>Healthcare Technology</option>
+    <option>Home Security Solutions</option>
+ </select>
+ <select class="form-control" id="sel1" style="width:70%;"  name="sector3">
+  <option>None</option>
+    <option>Network Technology Solutions</option>
+    <option>NGO</option>
+    <option>Organic Agriculture</option>
+ </select>
+  </div>
+  <div class="form-group">
+  <label for="exampleFormControlTextarea1">Working Experiance:</label>
+  <textarea class="form-control rounded-0" name="work_ex" id="exampleFormControlTextarea1" rows="3" style="width:70%;" maxlength="500" placeholder="Describe in 500 characters only!!!">
+
+  </textarea>
+</div>
+
+  <div class="form-group">
+  <label for="sel1">Working Experiance year:</label>
+  <select class="form-control" name="work_year" id="sel1" style="width:70%;">
+    <option>0-2</option>
+    <option>2-5</option>
+    <option>5-10</option>
+    <option>10 or More</option>
+  </select>
+</div>
+
+  <div class="form-group">
+  <label for="sel1">Startup Stages:</label>
+  <select class="form-control" id="sel1" name="g_stages" style="width:70%;">
+    <option>All</option>
+    <option>Ideation</option>
+    <option>Validation</option>
+    <option>Scaling</option>
+  </select>
+</div>
+<button type="submit" name="submit" class="btn btn-primary" >Submit</button>
+</form>
+</div>
+
+</div>
+
+  </body>
+</html>

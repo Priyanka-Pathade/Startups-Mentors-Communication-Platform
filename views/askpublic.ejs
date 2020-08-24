@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log In</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+      <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>
+      <!-- <a class="navbar-brand" href="#"></a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+    </nav>
+
+    <div class="container" style="margin-top: 5%;">
+     <div class="row">
+     <div class="col-lg-4">
+         <div class="row">
+
+      <div class="jumbotron " >
+        <div class="row">
+           
+          <div class="col-lg-4">
+              <img src="images/p2.jpg" alt="" width="100px" height="100px">
+          </div>
+          <div class="col-lg-8">
+            <h4>DRAFT YOUR QUESTIONS</h4>
+        </div>
+        </div>
+        <p>The community is here to help you with specific coding, algorithm, or language problems.</p>
+        <hr>
+        <a href="#demo"  data-toggle="collapse" style="width: 100%; text-decoration: none; color: black;"><b>1. Summerize the Problem</b></a>
+        <hr>
+        <div id="demo" class="collapse">
+         <ul>
+             <li>
+                Include details about your goal
+             </li>
+             <li>
+                Describe expected and actual results
+            </li>  
+            <li>
+                Include any error messages
+             </li>
+         </ul>
+        </div>
+        <a href="#demo1"  data-toggle="collapse" style="width: 100%; text-decoration: none; color: black;"><b>2. Describe what you have tried</b></a>
+        <hr>
+        <div id="demo1" class="collapse">
+            Show what you’ve tried and tell us what you found (on this site or elsewhere) and why it didn’t meet your needs. You can get better answers when you provide research.
+        </div>
+        <a href="#demo2"  data-toggle="collapse" style="width: 100%; text-decoration: none; color: black;"><b>3. Show some code</b></a>
+        <hr>
+        <div id="demo2" class="collapse">
+            When appropriate, share the minimum amount of code others need to reproduce your problem (also called a minimum, reproducible example)        </div>
+      </div>
+      <div class="jumbotron">
+          <div class="row">
+              <div class="col-lg-8">
+                <h4>SEE ASKED QUESTIONS  </h4>
+                <a class="btn btn-primary" href="/asked ">SEE</a>
+
+            </div>
+            <div class="col-lg-4">
+                <img src="images/p1.jpg" alt="" width="100px" height="100px">
+            </div>
+          </div>
+      </div>
+     
+    </div> 
+    </div>
+    <div class="col-lg-7 " style="margin-top: 0%; margin-left: 5%;">
+        <div class="row">
+           
+            <div class="col-lg-7">
+                <h2 style="text-align: center;">Ask a public question</h2>
+            </div>
+            
+            <div class="col-lg-3">
+                <img src="images/public.png" alt="" width="200px" height="100px">
+            </div>
+          </div>
+          <div class="jumbotron">
+               
+          <form method="post" action="">
+            <input type="text" value="<%= email %> " name="email" hidden>
+            <h4>Title</h4>
+            <div class="form-group">
+              <input type="text"  name="title" class="form-control" placeholder=" Be specific and imagine you’re asking a question to another person"  required>
+            </div>
+            <h5>Body</h5>
+            <p>Include all the information someone would need to answer your question</p>
+            <textarea rows="4" cols="70" id="disc" name ="description">
+                </textarea>
+                <h5>Tags</h5>
+                <p>Add up to 3 tags to describe what your question is about</p>
+                <div class="form-group">
+                  <input type="text"  name="tag1" class="form-control" placeholder=" Be specific like sector"  required><br>
+                  <input type="text"  name="tag2" class="form-control" placeholder=" Be specific like trend"  required><br>
+                  <input type="text"  name="tag3" class="form-control" placeholder=" Be specific like stage "  required>
+
+                </div>
+            <button type="submit" class="btn btn-primary" style="margin-left:40%;" name="submit" >Next</button>
+  
+          </form> 
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+  </body>
+</html>

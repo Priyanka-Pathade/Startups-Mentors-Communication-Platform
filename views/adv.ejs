@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Log In</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="signup-login.css" type="text/css">
+     
+    </head>
+    <body background="images/descus.png">
+        <form method="post" action=""   style="color:red;">
+
+       <div class="row">
+        <div class="col-lg-3" style="margin-left:5%; margin-top: 15%;">
+            <div class="form-group">
+                <input  class="form-control" id="exampleInputEmail1" style="color: coral;"  value="Get Advertised with:"><br><br>
+                <select class="form-control" id="select1" name="category"  onChange="getform()" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>Video with Text</option>
+                    <option>Image with Text</option>
+                    <option>Text Only</option>
+                  </select>
+              </div>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5"> 
+                    
+                       
+            <div class="form-group">
+              <label for="password">Contact email-id</label>
+              <input type="text" class="form-control" name="email" id="email" placeholder="Add Company email"   >
+            </div>
+            <div class="form-group">
+
+          <label for="name">title</label>
+          <input type="text" class="form-control" id="name" name="title" placeholder="Enter title of Adv" >
+        </div>
+        <label for="name">Describe Adv</label><br>
+        <textarea rows="4" cols="100" id="disc" name ="description">
+          Write description in 500 characters Only
+          </textarea>
+      
+      <div class="form-group">
+          <label for="confirm-password">Add URL</label>
+          <input type="text" class="form-control" id="url" name="url"  placeholder="Enter url" >
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Select starting date</label>
+          <input type="date" class="form-control" id="dat" name="dat"  placeholder="Enter date" >
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Select ending date</label>
+          <input type="date" class="form-control" id="dat2" name="dat2"  placeholder="Enter date" >
+        </div>
+      <div style="text-align:center;">
+      <button type="submit" name="submit" class="btn btn-warning" >Next</button>
+
+      </div>
+  </div>
+        
+       </div>
+        </form>
+
+
+
+    </body>
+</html>

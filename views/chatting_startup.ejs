@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheet/chat.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>   
+  <title>chatting startup</title>
+</head>
+<body>
+    <div class="" style="margin-left: -5px; margin-right: -5px;">
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+          <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <p style="color: white;"><%= menName %> </p>
+            </ul>            
+          </div>
+        </nav>
+        </header>
+        </div>
+
+        <form method="post" action="xyz">
+        <div class="container" style="margin-left: 30%;">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" id="accordion">
+                            <span class="glyphicon glyphicon-comment"></span> Chat
+                            <div class="btn-group pull-right">
+                                <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    <span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                        </div>
+                    <div class="panel-collapse collapse" id="collapseOne">
+                        <div class="panel-body">
+                            <ul class="chat">
+                                <% if(records.length >=1){ %>
+                                    <% records.forEach(function(row){ %>
+                                <li class="left clearfix"><span class="chat-img pull-left">
+                                    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                                </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font"><%= menName %></strong> <small class="pull-right text-muted">
+                                                <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                        </div>
+                                        <p>
+                                            <%= row.chatFromMentor %>
+                                        </p>
+                                    </div>
+                                </li>
+                                <%   })}else{ %>
+                                    <h1>No records found </h1>
+                                        <%  }  %>
+
+                                <% if(data.length >=1){ %>
+                                    <%   data.forEach(function(row){ %>
+                                <li class="right clearfix"><span class="chat-img pull-right">
+                                    <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                                </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                            <strong class="pull-right primary-font"><%= startName   %></strong>
+                                        </div>
+                                        <p>
+                                            <%= row.chatFromStartup %>
+                                        </p>
+                                    </div>
+                                </li>
+                                <%   })}else{ %>
+                                    <h1>No records found </h1>
+                                        <%  }  %>
+                            </ul>
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" name="chat" class="form-control input-sm" placeholder="Type your message here..." />
+                                <input type="email" name="menEmail" value="<%= menEmail %>" hidden/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat" type="submit" name="submit">
+                                        Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log In</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+      <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>
+      <!-- <a class="navbar-brand" href="#"></a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top: 5%;">
+     <div class="row">
+     <div class="col-lg-4">
+         <div class="row">
+
+      <div class="jumbotron " >
+        <div class="row">
+           
+          <div class="col-lg-4">
+              <img src="images/p2.jpg" alt="" width="100px" height="100px">
+          </div>
+          <div class="col-lg-8">
+            <h4>DRAFT YOUR QUESTIONS</h4>
+            <button class="btn btn-primary">Ask Now</button>
+
+        </div>
+        </div>
+        
+        
+      </div>
+      <div class="jumbotron">
+          <div class="row">
+              <div class="col-lg-8">
+                <h4>GIVE ANSWER </h4>
+                <button class="btn btn-primary"><a href="#give" style="text-decoration: none; color: white;">Answers</a> </button>
+
+            </div>
+            <div class="col-lg-4">
+                <img src="images/p1.jpg" alt="" width="100px" height="100px" >
+            </div>
+          </div>
+      </div>
+     
+    </div> 
+    </div>
+    <div class="col-lg-7 " style="margin-top: 0%; margin-left: 5%;">
+        <div class="row" >
+           
+            <div class="col-lg-7">
+                <h2 style="text-align: center;">Answers</h2>
+            </div>
+            
+            <div class="col-lg-3">
+                <img src="images/ans.png" alt="" width="200px" height="100px">
+            </div>
+          </div>
+         <hr>
+          <div class="row " style="margin-top: 2%; border: black;">
+            <div class="col-lg-1">
+              <div class="row">
+              <h5 style="margin-left: 8px;">  <%= question.vote %> </h5>
+              </div>
+              <div class="row">
+                <img src="images/tup.png" alt="" width="35px" height="20px" id="tup" onClick="votequeup('<%= question._id %>')">
+              </div>
+              
+              <div class="row">
+                vote
+              </div>
+              <div class="row">
+                <img src="images/tdown.png" alt="" width="35px" height="20px" id="tdown" onClick="votequedown('<%= question._id %>')">
+              </div>
+              </div>
+               
+         
+            <div class="col-lg-9">
+                <div class="row">
+                  <h5 style="color: coral;"><%= question.title %> </h5>
+                  
+                  <p><b>Description</b><br>
+                    <%= question.body %> </p>
+                </div>
+           
+          </div>
+          <div class="col-lg-2">
+            <div class="row">
+              <%= question.email %> 
+            </div>
+            <div class="row">
+            </div>
+          </div>
+         </div>
+         <hr>
+          <% if(records.length>0){ %> 
+          <% records.forEach(function(row){ %>
+
+            <div class="row" style="margin-top: 2%;">
+                <div class="col-lg-1">
+                  <div class="row">
+                  <h5 style="margin-left: 8px;">  <%= row.vote %> </h5>
+                  </div>
+                  <div class="row">
+                    <img src="images/tup.png" alt="" width="35px" height="20px" id="tup" onClick="voteup('<%= row._id %>','<%= row.qid %> ')" >
+                  </div>
+                  
+                  <div class="row">
+                    vote
+                  </div>
+                  <div class="row">
+                    <img src="images/tdown.png" alt="" width="35px" height="20px" id="tdown" onClick="votedown('<%= row._id %>','<%= row.qid %> ')">
+                  </div>
+                  </div>
+                   
+             
+                <div class="col-lg-9">
+                    <div class="row">
+                      <p><%= row.ans %> </p>
+                    </div>
+               
+              </div>
+              <div class="col-lg-2">
+                <%= row.email %> 
+              </div>
+             </div>
+             <hr>
+            <% }) }else{ %> 
+             <div class="row">
+              <p style="color: red;">No any Answer</p>
+             </div>
+            
+            <% } %> 
+             <div  id="give" class="jumbotron" style="margin-top: 5%;">
+
+          <form method="post" action="">
+            <input type="text" value="<%= id %>" name="qid" hidden>
+            <h4>Your Answer</h4>
+            <p>Thanks for contributing an answer to Stack Overflow!
+
+              Please be sure to answer the question. Provide details and share your research!
+              But avoid …
+              
+              Asking for help, clarification, or responding to other answers.
+              Making statements based on opinion; back them up with references or personal experience.
+              To learn more, see our tips on writing great answers.</p>            
+            <textarea rows="4" cols="70" id="disc" name ="description">
+                </textarea>
+               
+            <button type="submit" class="btn btn-primary" style="margin-left:40%;" name="submit" >Post Your Answer</button>
+  
+          </form> 
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<script>
+  function voteup(val1,val2){
+    alert("Thanks for the feedback!");
+    // document.getElementById("tup").src = "images/tupgreen.jpg";
+    window.location.href="/edit"+val1+"/"+val2;
+  }
+  function votedown(val1,val2){
+    alert("Thanks for the feedback!");
+    // image.src = "tdown.png";
+    window.location.href="/tdown"+val1+"/"+val2;
+  }
+  function votequeup(val){
+    alert("Thanks for the feedback!");
+    // image.src = "tdown.png";
+    window.location.href="/qup"+val;
+  }
+  function votequedown(val){
+    alert("Thanks for the feedback!");
+    // image.src = "tdown.png";
+    window.location.href="/qdown"+val;
+  }
+  </script>
+
+
+
+  </body>
+</html>

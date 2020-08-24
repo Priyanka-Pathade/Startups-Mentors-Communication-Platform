@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+      <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>
+      <!-- <a class="navbar-brand" href="#"></a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </nav>
+
+
+    <div class="container jumbotron" style="margin-top: 10px; text-align:center;">
+      <h3>Notification</h3>
+      <% data.forEach(function(row){ %>
+            <div class="row" styel="margin-top:20px;">
+                <p style="margin-top:20px;">Name : <%= row.postedTo %></p>
+                <p style="margin-left:50px;margin-top:20px;">Email :    <%= row.postedToemail %></p><br><br>
+                <form method="post" >
+                    <input type="text" value="<%= row.postedToemail %>"  name="postedto" hidden />
+                    <button type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:40px;">Chat Now</button>
+                </form>
+                <br>
+            </div>
+        <% }) %> 
+    </div>
+
+  </body>
+</html>

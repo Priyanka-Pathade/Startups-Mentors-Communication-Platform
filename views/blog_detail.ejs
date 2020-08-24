@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Common Page</title>
+
+	  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="faq.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="stylesheet/style.css">
+
+    <!--* Google font link-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div class="" style="margin-left: -5px; margin-right: -5px;">
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+          <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            </ul>
+          </div>
+        </nav>
+        </header>
+        </div>
+
+<div class="container" >
+<div class="jumbotron">
+<div class="row">
+<div class="card" style="width:80%; margin-left:10%;">
+<div class="card-header">
+ <h4 style="text-align:center;"><b><%= data.title  %></b></h4>
+  </div>
+  <img class="card-img-top" src="uploads/<%= data.image %>" alt="Card image cap">
+  <div class="card-body">
+    <!-- <p class="card-text"><%= data.desc  %></p> -->
+  </div>
+</div>
+
+</div>
+<p style="margin-left:10%; margin-right:10%;"><%= data.desc %></p>
+</div>
+</div>
+</body>
+</html>

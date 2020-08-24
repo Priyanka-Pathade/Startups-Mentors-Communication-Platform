@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <title>Startup-Profile</title>
+</head>
+<body>
+
+   <br>
+    <div class="container">
+      <div class="jumbotron" style=" margin-left: 50px;">
+        <div class="progress" style="margin-left: 30px; margin-right: 30px;">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+        aria-valuemin="0" aria-valuemax="100" style="width:50%; ">
+          50% Complete (info)
+        </div> 
+        </div>
+        
+       
+          
+          <form action="" method="post" enctype="multipart/form-data" style="margin-left:30%;">
+          <input type="file" name="img" >
+            <input type="text" name="sam" id=""/>
+            <div class="form-group" >
+                <label for="name">company Name:</label>
+                <input type="text" class="form-control" id="name" name="Cname" placeholder="enter company name"style="width: 50%;" required>
+              </div>
+		        <div class="form-group" >
+                <label for="adname">Leader Name:</label>
+                <input type="text" class="form-control" id="adname"placeholder="enter admin name"  value="" name="lname" style="width: 50%;" required disabled>
+              </div>
+              <div class="form-group" >
+                <label for="email">Email-ID:</label>
+                <input type="email" class="form-control" id="email"placeholder="enter Email-ID" value="" name="email" style="width: 50%;" required disabled>
+              </div>
+            <div class="form-group">
+              <label for="text">Web address:</label>
+              <input type="text" class="form-control" id="web" name="web" placeholder="enter web address"style="width:50%;" >
+              </div>
+	<div class="form-group">
+      <label for="mob no">MObile NO:</label>
+      <input type="text" class="form-control" id="mob" placeholder="Enter Mobile NO"style="width:50%" name="mob">
+    </div>
+    <div class="form-group">
+     <lable for="category">Startup Category:</lable>
+      <select name="cat"> 
+  	<option value="Select Your  Category" id="category">Select Your Startup category</option>
+ 	 <option value="comp">Investors</option>
+  	<option value="Agriculture">Accelerators</option>
+  	<option value="Automobile">Incubators</option>
+	</select>
+  </div> 
+  <div class="form-group">
+    <lable for="stage">Startup stage:</lable>
+     <select name = "stage">
+   <option value="Select Your Startup stage" id="stage">Select Your Startup stage</option>
+   <option value="Idiation">Ideation</option>
+   <option value="Validation">Validation</option>
+   <option value="Early Traction">Early Traction</option>
+   <option value="Scaling">Scaling</option>
+ </select>
+ </div> 
+     <div class="form-group">
+     <lable for="sector">Sector:</lable>
+      <select name ="sector">
+  	<option value="Select Your interested Sector" id="sector">Select Your interested Sector</option>
+ 	 <option value="comp">computer</option>
+  	<option value="Agriculture">Agriculture</option>
+  	<option value="Automobile">Automobile</option>
+ 	<option value="Advertising">Advertising</option>
+	<option value="Aeuronotics">Aeuronotics</option>
+	<option value="Automobile">advertising	</option>
+	<option value="Aeronautics Aerospace & Defence"> Aeronautics Aerospace & Defence</option>
+<option value="AI">AI</option>
+<option value="Airport Operations">AI</option>
+<option value="Analytics">Analytics</option>
+<option value="Animation">Animation</option>
+<option value="AR VR (Augmented + Virtual Reality)">AR VR (Augmented + Virtual Reality)</option>
+<option value="Architecture Interior Design">Architecture Interior Design</option>
+<option value="Art & Photography">Art & Photography</option>
+<option value="Automotive">Automotive</option>
+<option value="Biotechnology">Biotecnology</option>
+<option value="chemicals">chemicals</option>
+<option value="computer vision">computer vision</option>
+<option value="construction">construction</option>
+<option value="Dating Matrimonial">Dating Matrimonial</option>
+<option value="Design">Design</option>
+<option value="Education">Education</option>
+<option value="Enterprise Software">Enterprise Software</option>
+<option value="Events">Events</option>
+<option value="Fashion">Fashion</option>
+<option value="Finance Technology">Finanace Technology</option>
+<option value="Food">Food</option>
+<option value="Green Technology">Green Technology</option>
+<option value="Healthcare & Lifesciences">Healthcare & Lifesciences</option>
+<option value="House-Hold Services">House-Hold Services</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="">Human Resources</option>
+<option value="IT Services">IT Services</option>
+<option value="logidtics">Logistics</option>
+<option value="Marketing">Marketing</option>
+<option value="Media & Entertainment">Media & Entertainment</option>
+<option value="Nanotechnology">Nanotechnology</option>
+<option value="Non-renewable energy">Non-renewable Energy</option>
+<option value="Other Specialty Retailers">Other Specialty Retailers</option>
+<option value="Others">Others</option>
+<option value="Passenger Experience">Passenger Experience</option>
+<option value="Pets & Animals">Pets & Animals</option>
+<option value="Professional & Commercial Services">Professional & Commercial Services</option>
+<option value="Real Estate">Real Estate</option>
+<option value="Renewable Energy">Renewable Energy</option>
+<option value="Retail">Retail</option>
+<option value="Robotics">Robotics</option>
+<option value="Security Solutions">Security Solutions</option>
+<option value="Social Impact">Social Impact</option>
+<option value="Social Network">Social Network</option>
+<option value="Sports">Sports</option>
+<option value="Technology Hardware">Technology Hardware</option>
+<option value="Telecommunication & Networking">Telecommunication & Networking</option>
+<option value="Textiles & Apparel">Textiles & Apparel</option>
+<option value="Transportation & Storage">Transportation & Storage</option>
+<option value="Travel & Tourism">Travel & Tourism</option>
+<option value="Waste Management ">Waste Management </option>
+</select>
+</div> 
+
+	<div class="form-group">
+        <lable for="disc">Brief Description about Startup:</lable>
+	</div>
+	<div class="text">
+	<textarea rows="4" cols="50" id="disc" name ="description">
+
+        </textarea>
+	</text>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

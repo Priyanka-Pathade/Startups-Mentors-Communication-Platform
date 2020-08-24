@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Log In</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="signup-login.css" type="text/css">
+     
+    </head>
+    <body >
+        <form method="post" action=""   >
+
+       <div class="row">
+       
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8"> 
+                    
+            <% records.forEach(function(row){ %>
+                  <div class="row">
+                   <h2 ><%= row.cname %> </h2>
+                 </div>
+                 <div class="row">
+                   <div class="col-lg-4">
+                       <p>Designation  :
+                       <%= row.desig %> </p>
+                       <p>Sector Of work  :
+                       <%= row.sector %> </p>
+                       <p>Starting On :
+                       <%= row.start %> </p>
+                   </div>
+                   <div class="col-lg-8">
+                     <p><%= row.des %> </p>
+                     Location
+                     <p><%= row.loc %> </p>
+                     <h6 >For more information do visit   :</h6>
+                   
+                     <a href=""><%= row.url %> </a>
+                   </div>
+                 
+                   
+                  
+                   <p style="float: right;">Contact Us on :<%= row.contact %> </p><br><br>
+
+                 </div>
+                 <h6><a href="/apply<%= row._id %> ">Apply Now</a></h6><hr>
+                 <% }) %> 
+  </div>
+        
+       </div>
+        </form>
+
+
+
+    </body>
+</html>

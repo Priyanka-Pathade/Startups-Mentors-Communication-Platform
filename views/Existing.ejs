@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> STARTUP PROFILE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup-login.css" type="text/css">
+  </head>
+  <body>
+
+
+
+    <div class="container" style="width:40%;">
+      <div class="row" >
+</div>
+
+ 
+      <div class="jumbotron">
+
+        <form method="post" action="">
+          <h3 style="text-align:center;">Profile</h3>
+          
+          <img src="images/u1.jpg" class="img-thumbnail" alt="Cinque Terre" height="200px" width="200px" style="margin-left: 27%;" >
+          <input type="file" name="pic" id="pic"  >  
+          <button onclick="Fun()">Submit</button>
+         <input type="text" name="uid" id="" value="<%= uid %>" hidden>
+          <div class="form-group" >
+            <div class="form-group" >
+              <label for="name">Email id:</label>
+              <input type="text" class="form-control"   value="<%= data.email  %> " disabled>
+            </div>
+            <label for="name">company Name:</label>
+            <input type="text" class="form-control" id="name" name="Cname" placeholder="Enter company name"  value="<%= data.company  %> " required>
+          </div>
+            <div class="form-group">
+              <label for="name">Leader Name</label>
+              <input type="text" class="form-control" id="name" name="lname" value="<%= data.leader  %> " placeholder="Enter Leader's name"required>
+            </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<%= data.email %> " hidden  >
+          </div>
+          <div class="form-group">
+            <label for="text">Web address:</label>
+            <input type="text" class="form-control" id="web" name="web" value="<%= data.website  %> " placeholder="Enter web address" >
+            </div>
+            <div class="form-group">
+              <label for="mob no">Mobile No:</label>
+              <input type="text" class="form-control" id="mob"  value="<%= data.mobile  %> " placeholder="Enter Mobile No" name="mob">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Startup Category:</label>
+              <input type="text" class="form-control" id="mob"  value="<%= data.s_category  %> " placeholder="Enter Mobile No" name="cat">
+           </div> 
+           
+           <div class="form-group">
+            <label for="exampleFormControlSelect1">Startup stage:</label>
+            <input type="text" class="form-control" id="mob"  value="<%= data.s_stage  %> " placeholder="Enter Mobile No" name="stage">
+         </div> 
+         <div class="form-group">
+            <label for="exampleFormControlSelect1">Startup sector:</label>
+            <input type="text" class="form-control" id="mob"  value="<%= data.sector  %> " placeholder="Enter Mobile No" name="sector">
+         </div> 
+
+         <br>
+     <lable for="disc">Brief Description about Startup:</lable>
+     <textarea rows="4" cols="50" id="disc" name ="description">
+        <%= data.description %>    </textarea>
+       <div class="form-group">
+       </div>
+          <div style="text-align:center;">
+          <button type="" name="submit" class="btn btn-primary" onClick="editRecord('<%= data._id%>')">Update</button>
+
+          </div>
+        </form>
+      </div> 
+      </div>
+    </div>
+    <script>
+      function editRecord(val){
+        window.location.href="/edit"+val;
+      }
+      
+      
+      </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> STARTUP PROFILE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup-login.css" type="text/css">
+  </head>
+  <body>
+    <div class="container" style="width:40%;">
+      <div class="row" >
+</div> 
+      <div class="jumbotron">
+        <form method="Post" action=""  enctype="multipart/form-data">
+          <h3 style="text-align:center;">Profile</h3>
+          
+          <img src="images/u1.jpg" class="img-thumbnail" alt="Cinque Terre" height="200px" width="200px" style="margin-left: 27%;" >
+         
+          <div class="custom-file mb-3">
+              <input type="file" class="custom-file-input" id="customFile" name="filename">
+              <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+
+          <div class="form-group">
+            <label for="email">Full Name:</label>
+            <input type="text" class="form-control" style="width:70%;" value="<%= data.name; %>" disabled>
+            <input type="text" class="form-control" style="width:70%;" name="fname" value="<%= data.name; %>" hidden>
+
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Register As:</label>
+            <input type="text" class="form-control" id="name" name="cat"  value="<%= data.Register_as  %>" disabled>
+          </div>
+          <label for="gender">Gender:</label>
+  <label class="radio-inline"><input type="radio" name="gender" >Male</label>
+  <label class="radio-inline"><input type="radio" name="gender">Female</label>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Success Stories:</label>
+    <textarea class="form-control rounded-0" name="stories" rows="3" style="width:70%;" maxlength="500" placeholder="Describe in 500 characters only!!!" required>
+    </textarea>
+  </div>
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<%= data.email %>" aria-describedby="emailHelp" disabled>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+         
+            <div class="form-group">
+              <label for="mob no">Mobile No:</label>
+              <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile No" name="mobile">
+            </div>
+            <div class="form-group">
+                <label for="sel1">Focus Sectors:</label>
+             <select class="form-control" id="sel1" style="width:70%;" name="sector1" required>
+                 <option>None</option>
+                 <option>Machine Learning</option>
+                <option>Network Technology Solutions</option>
+                <option>NGO</option>
+                <option>Organic Agriculture</option>
+             </select>
+            
+             <select class="form-control" id="sel1" style="width:70%;" name="sector2">
+                 <option>None</option>
+               <option>Healthcare Technology</option>
+                <option>Home Security Solutions</option>
+             </select>
+             <select class="form-control" id="sel1" style="width:70%;"  name="sector3">
+              <option>None</option>
+                <option>Network Technology Solutions</option>
+                <option>NGO</option>
+                <option>Organic Agriculture</option>
+             </select>
+              </div> 
+           
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Working Experiance:</label>
+                <textarea class="form-control rounded-0" name="work_ex" id="exampleFormControlTextarea1" rows="3" style="width:70%;" maxlength="500" placeholder="Describe in 500 characters only!!!">
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="sel1">Working Experiance year:</label>
+                <select class="form-control" name="work_year" id="sel1" style="width:70%;">
+                  <option>0-2</option>
+                  <option>2-5</option>
+                  <option>5-10</option>
+                  <option>10 or More</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sel1">Perfection Level:</label>
+                <select class="form-control" id="sel1" name="g_stages" style="width:70%;">
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Expert</option>
+                </select>
+              </div>
+          <div style="text-align:center;">
+          <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
+
+          </div>
+        </form>
+      </div> 
+      </div>
+    </div>
+    <script>
+      function Fun(){
+        var fileVal=document.getElementById("myfile");
+      alert(fileVal.value);
+      }
+    </script>
+  </body>
+</html>

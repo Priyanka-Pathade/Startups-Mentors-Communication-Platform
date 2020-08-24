@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="signup-login.css" type="text/css">
+        <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    </head>
+    <body>
+ <div class="" style="margin-left: -5px; margin-right: -5px;">
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-1">
+          <a class="navbar-brand text-bold mx-2 mx-3 lead" href=""> <b>Welcome...On Portal</b></a>  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            </ul>
+           
+          </div>
+        </nav>
+        </header>
+        </div>
+<div class="container">
+<% if(succ !=''){ %>
+<div style="text-align: center;" class="alert alert-success" role="alert">
+<%= succ %>
+</div>
+<%  } %>
+        <form method="post" action="" enctype="multipart/form-data">
+       <div class="row" style="margin-top:5%;" >
+       
+        <div class="col-lg-3"> 
+              <img src="images/blog2.jpg" style="width:90%; height:100%; margin-left:-5px;">
+        </div>
+        <div class="col-lg-7"> 
+           <div class="form-group">
+          <label for="name"><b>Title of Blog</b></label>
+          <input type="text" class="form-control" id="name" name="title" placeholder="Enter title of your blog" >
+        </div>
+        <div class="form-group">
+          <label for="name"><b>Sector</b></label>
+          <select class="form-control" id="exampleFormControlSelect1" name="domain" required >
+             <option value="Select Your  Category" id="category">Select Your Blog category</option>
+             <option value="comp">computer</option>
+             <option value="Agriculture">Agriculture</option>
+             <option value="Automobile">Automobile</option>
+             <option value="Advertising">Advertising</option>
+             <option value="Aeuronotics">Aeuronotics</option>
+             <option value="Automobile">advertising	</option>
+             <option value="Aeronautics Aerospace & Defence"> Aeronautics Aerospace & Defence</option>
+     <option value="AI">AI</option>
+     <option value="Airport Operations">AI</option>
+     <option value="Analytics">Analytics</option>
+     <option value="Animation">Animation</option>
+     <option value="AR VR (Augmented + Virtual Reality)">AR VR (Augmented + Virtual Reality)</option>
+     <option value="Architecture Interior Design">Architecture Interior Design</option>
+     <option value="Art & Photography">Art & Photography</option>
+     <option value="Automotive">Automotive</option>
+     <option value="Biotechnology">Biotecnology</option>
+     <option value="chemicals">chemicals</option>
+     <option value="computer vision">computer vision</option>
+     <option value="construction">construction</option>
+     <option value="Dating Matrimonial">Dating Matrimonial</option>
+     <option value="Design">Design</option>
+     <option value="Education">Education</option>
+     <option value="Enterprise Software">Enterprise Software</option>
+     <option value="Events">Events</option>
+     <option value="Fashion">Fashion</option>
+     <option value="Finance Technology">Finanace Technology</option>
+     <option value="Food">Food</option>
+     <option value="Green Technology">Green Technology</option>
+     <option value="Healthcare & Lifesciences">Healthcare & Lifesciences</option>
+     <option value="House-Hold Services">House-Hold Services</option>
+     <option value="Internet of Things">Internet of Things</option>
+     <option value="">Human Resources</option>
+     <option value="IT Services">IT Services</option>
+     <option value="logidtics">Logistics</option>
+    
+           </select>
+        </div>
+
+        <label for="img"><b>Upload Image</b></label><br>
+  <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="customFile" name="filename">
+      <label class="custom-file-label" for="customFile">Choose file</label>
+    </div>
+
+        <label for="name"><b>Description</b></label><br>
+        <textarea rows="8" class="form-control" cols="100" id="editor" name ="description" placeholder="Describe your thoughts here..."></textarea>
+    
+        <button type="submit" class="btn btn-info" style="margin-left:50%; margin-top:5%;">Submit</button>
+  </div>
+       </div>
+        </form>
+        </div>
+
+        <script>
+          CKEDITOR.replace('editor');
+        </script>
+    </body>
+</html>
