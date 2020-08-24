@@ -6,8 +6,8 @@
 * Database: MongoDB.
 
 #### Requirements:
-- Nodejs: version v12.16.1 or above.
-- MongoDB should be installed, use either mongoDB compass or Atlas for database.
+-  Nodejs: version v12.16.1 or above.
+-  MongoDB should be installed, use either mongoDB compass or Atlas for database.
 
 #### Challenges and Learning:
 * Handling duplicate username during signup.
