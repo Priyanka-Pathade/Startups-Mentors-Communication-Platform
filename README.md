@@ -33,8 +33,26 @@
 **4. Blogs**
 - This forum is available for startups and mentors. They can share their thoughts from blogs.
 
-#### Quick start:
+###Roles
+**1.Startup**
+* can connect mentors through private chat.
+* can discuss thoughts through public forum.
+* can hire students through hire with us.
+* can share thoughts and expreriance through blogs.
+* can advertise company
+ 
+**2.Mentor**
+* can connect startup through private chat.
+* can discuss thoughts through public forum.
+* can share thoughts through blogs.
+
+**3.Students**
+* Get hired through hire with us.
+* can discuss thoughts through public forum.
+
+## Quick start:
 1. Navigate to the project folder.
 2. Run nodemon
 3. If the browser doesn't open automatically, navigate to http://localhost:3000 to see the site.
+
 
