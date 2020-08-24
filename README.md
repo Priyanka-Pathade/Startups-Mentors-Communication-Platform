@@ -33,7 +33,7 @@
 **4. Blogs**
 - This forum is available for startups and mentors. They can share their thoughts from blogs.
 
-###Roles
+### Roles:
 **1.Startup**
 * can connect mentors through private chat.
 * can discuss thoughts through public forum.
