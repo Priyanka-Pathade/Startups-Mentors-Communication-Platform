@@ -16,21 +16,21 @@
 * Making login compulsary for certain actions.
 
 #### Feature Provided:
-* Public Forum: 
+1. Public Forum: 
 - This is available for startups, mentors and students.
 - Questions can be sort by views,answers and votes.
 - Question sarching facility.
 
-* Private Chat:
+2. Private Chat:
 - This forum is available for startups and mentors.
 - Mentor's filtering facility based on area of expertise.
 
-* Hire With us:
+3. Hire With us:
 - This is Available for startups and students.
 - Startups can advertise the vaccancies of their companies with required skills and can be able to hire talent.
 - students can apply for the job.
 
-* Blogs:
+4. Blogs:
 - This forum is available for startups and mentors. They can share their thoughts from blogs.
 
 #### Quick start:
