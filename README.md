@@ -16,7 +16,7 @@
 * Making login compulsary for certain actions.
 
 #### Feature Provided:
-1. Public Forum: 
+1. **Public Forum** 
 - This is available for startups, mentors and students.
 - Questions can be sort by views,answers and votes.
 - Question sarching facility.
